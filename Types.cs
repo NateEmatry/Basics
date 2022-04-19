@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Basics
 {
     public static class Types {
@@ -77,6 +79,12 @@ namespace Basics
             catch (Exception e) {
                 Console.WriteLine("Checked: One billion plus two billion is: " + e);
             }  
+        }
+
+        // Copied from the book.
+        public static void BigIntDemo() {
+
+            
         }
     }
 }

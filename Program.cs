@@ -36,3 +36,5 @@ Console.WriteLine();
 // PreProcessor.TestDebug();
 // Types.NumericTypesDemo();
 // Types.CheckedContextDemo();
+// Types.BigIntDemo();
+StringsDemo.CharsDemo();

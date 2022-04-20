@@ -81,10 +81,47 @@ namespace Basics
             }  
         }
 
-        // Copied from the book.
+        /* Copied from the book. Calculates values in the Fibonacci sequence,
+           showing every 100th value. This quickly produces numbers far too
+           large to fit into any of the other integer types.
+        */
         public static void BigIntDemo() {
 
+            BigInteger i1 = 1;
+            BigInteger i2 = 1;
+            Console.WriteLine(i1);
+            int count = 0;
+            while (true)
+            {
+                if (count++ % 100 == 0)
+                {
+                    Console.WriteLine(i2);
+                }
+                BigInteger next = i1 + i2;
+                i1 = i2;
+                i2 = next;
+            }
             
+        }
+
+        public static void BooleanDemo() {
+
+            // In C#, values indicating truth or falsehood must be represented
+            // by a bool, whose values can be true or false.
+            // (System.Boolean)
+
+            bool b = true;
+
+            if (b)
+                Console.WriteLine("Boolean is true.");
+
+            if (!b)
+                Console.WriteLine("Boolean is false.");
+
+            int i = 0;
+
+            // if (i)
+            // Console.WriteLine("Can't use numeric values to be true or false.");
         }
     }
 }

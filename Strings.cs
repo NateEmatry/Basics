@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Basics
 {
     public static class StringsDemo {
@@ -29,9 +31,61 @@ namespace Basics
 
         }
 
+        /*
+            Since strings are immutable, a StringBuilder should be used
+            when a large number of operations on a string are required.
+         */
         public static void StringBuilderDemo() {
 
+            int capacity = 1000;
+            int maxCapacity = 2000;
+
+            StringBuilder sb = new StringBuilder(capacity);
+            Console.WriteLine($"Created a new StringBuilder with capacity {capacity}");
+
+            sb = new StringBuilder(capacity, maxCapacity);
+            Console.WriteLine($"Created a new StringBuilder with starting capacity {sb.Capacity}"
+                + $" and maximum capacity {sb.MaxCapacity}");
+
+            sb = new StringBuilder();
+            Console.WriteLine($"Created a new StringBuilder with default starting capacity {sb.Capacity}"
+                + $" and default max capacity {sb.MaxCapacity}");
+
+
             
+            sb.EnsureCapacity(20000);
+            Console.WriteLine($"Capacity {sb.MaxCapacity} is at least 20,000.");
+
+            string phrase = "Apple";
+
+            sb = new StringBuilder(phrase);
+            Console.WriteLine($"Created a new StringBuilder from starting phrase \"{sb.ToString()}\"");
+
+            sb.Append(", Banana");
+            Console.WriteLine($"Appended: \"{sb.ToString()}\"");
+
+            string[] crops = {"", "Cucumber", "Durian", "Eggplant", "Fig"};
+
+            sb.AppendJoin(", ", crops);
+            Console.WriteLine($"Append-joined: {sb.ToString()}");
+
+
+            sb.Replace("Durian", "Dandelion");
+            Console.WriteLine($"Replacement: {sb.ToString()}");
+
+            sb.Remove(sb.ToString().IndexOf("Cucumber"), "Cucumber, ".Length);
+            Console.WriteLine($"Removed \"Cucumber\": {sb.ToString()}");
+
+            sb.Insert(sb.ToString().IndexOf("Dandelion"), "Cauliflower, ");
+            Console.WriteLine($"Inserted \"Cauliflower\": {sb.ToString()}");
+
+            sb.AppendLine();
+            sb.AppendLine("Adding a line.");
+            Console.WriteLine($"Append line: {sb.ToString()}");
+
+            sb.Clear();
+            Console.WriteLine($"Cleared StringBuilder: \"{sb.ToString()}\"");
+
         }
 
 

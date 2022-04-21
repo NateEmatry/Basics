@@ -37,4 +37,5 @@ Console.WriteLine();
 // Types.NumericTypesDemo();
 // Types.CheckedContextDemo();
 // Types.BigIntDemo();
-StringsDemo.CharsDemo();
+// StringsDemo.CharsDemo();
+StringsDemo.StringBuilderDemo();

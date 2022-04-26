@@ -25,6 +25,9 @@
     Ian Griffiths
     O'Reilly 2020
 
+
+    AND Microsoft Docs
+
 */
 
 using Basics;
@@ -38,4 +41,5 @@ Console.WriteLine();
 // Types.CheckedContextDemo();
 // Types.BigIntDemo();
 // StringsDemo.CharsDemo();
-StringsDemo.StringBuilderDemo();
+// StringsDemo.StringBuilderDemo();
+// Tuples.TuplesDemo();

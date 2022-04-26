@@ -43,3 +43,4 @@ Console.WriteLine();
 // StringsDemo.CharsDemo();
 // StringsDemo.StringBuilderDemo();
 // Tuples.TuplesDemo();
+Misc.MiscDemo();

@@ -2,6 +2,9 @@ namespace Basics
 {
     public static class Misc {
 
+        public static string? NullString;
+        public static string NotNullString = "I am not null";
+
         public static void MiscDemo() {
 
             /*  The "dynamic" type is presented to the runtime as an object.
@@ -22,6 +25,15 @@ namespace Basics
             catch (Exception e) {
                 Console.WriteLine(e);
             }
+
+            // Null-conditional and null-coalescing operators
+
+            string output = NullString?? "String is null";
+            int characterCount = NullString?.Length ?? 0;
+            characterCount = NotNullString?.Length ?? 0;
+
+            Console.WriteLine(output);
+
 
             Console.WriteLine("End of MiscDemo method.");
         }

@@ -43,4 +43,7 @@ Console.WriteLine();
 // StringsDemo.CharsDemo();
 // StringsDemo.StringBuilderDemo();
 // Tuples.TuplesDemo();
-Misc.MiscDemo();
+// Misc.MiscDemo();
+Patterns.TuplePatternsDemo();
+Patterns.TypePatternsDemo();
+Console.WriteLine(Patterns.WhenIsDemo());
